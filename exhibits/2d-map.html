@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="An interactive, synthetic 2D urban network teaching exhibit.">
+  <title>2D map — Urbanity learning companion</title>
+  <link rel="stylesheet" href="../_static/exhibits.css">
+  <script defer src="../_static/exhibits.js"></script>
+</head>
+<body>
+  <main class="page">
+    <p class="eyebrow">JUPYTERLITE × URBANITY · VISUAL EXHIBIT</p>
+    <h1>2D map: see the layers</h1>
+    <p class="intro">Toggle the schematic streets, building blocks, and context points. Everything drawn here is synthetic—not a map of a real place or output from the Urbanity package.</p>
+    <nav class="links" aria-label="Related exhibits">
+      <a href="3d-map.html">3D map</a><a href="3d-scene.html">3D scene</a>
+      <a href="../start-here.html">Read the guide</a>
+    </nav>
+    <section class="panel">
+      <div class="controls" aria-label="Map layers">
+        <label><input type="checkbox" data-layer-toggle="streets" checked> Streets</label>
+        <label><input type="checkbox" data-layer-toggle="buildings" checked> Buildings</label>
+        <label><input type="checkbox" data-layer-toggle="context" checked> Context points</label>
+      </div>
+      <div class="map-frame">
+        <svg viewBox="0 0 900 540" role="img" aria-labelledby="map-title map-desc">
+          <title id="map-title">Synthetic neighbourhood street network and city blocks</title>
+          <desc id="map-desc">An illustrative grid of streets, blocks, and context markers with no real geographic coordinates.</desc>
+          <rect width="900" height="540" fill="#eaf3ef"/>
+          <g class="layer-buildings" data-layer="buildings" fill="#ecc88f" stroke="#ad8050" stroke-width="2">
+            <path d="M92 74h155v91H92zM314 74h155v91H314zM537 74h152v91H537zM92 229h155v91H92zM314 229h155v91H314zM537 229h152v91H537zM92 384h155v91H92zM314 384h155v91H314zM537 384h152v91H537z"/>
+            <g fill="#fff3d8" stroke="none">
+              <path d="M108 90h48v22h-48zm70 0h48v22h-48zm0 42h48v12h-48zM330 90h48v22h-48zm70 0h48v22h-48zm0 42h48v12h-48z"/>
+            </g>
+          </g>
+          <g class="layer-streets" data-layer="streets" fill="none" stroke="#fff" stroke-width="26">
+            <path d="M0 198h900M0 353h900M278 0v540M500 0v540M713 0v540"/>
+          </g>
+          <g class="layer-streets" fill="none" stroke="#88a2a3" stroke-width="2" stroke-dasharray="7 7">
+            <path d="M0 198h900M0 353h900M278 0v540M500 0v540M713 0v540"/>
+          </g>
+          <g class="layer-context" data-layer="context">
+            <g fill="#438d78" stroke="#fff" stroke-width="5">
+              <circle cx="142" cy="197" r="13"/><circle cx="391" cy="353" r="13"/>
+              <circle cx="616" cy="198" r="13"/><circle cx="787" cy="353" r="13"/>
+            </g>
+            <g fill="#163248" font-family="system-ui,sans-serif" font-size="16" font-weight="700">
+              <text x="109" y="185">PARK</text><text x="349" y="341">PLACE</text>
+              <text x="574" y="185">SCHOOL</text><text x="744" y="341">MARKET</text>
+            </g>
+          </g>
+          <g fill="#163248" font-family="system-ui,sans-serif" font-size="14">
+            <text x="24" y="514">Illustrative only · no basemap · no real coordinates</text>
+          </g>
+        </svg>
+      </div>
+      <p class="caption">Try hiding one layer at a time: which questions become easier to ask when streets and context are viewed together?</p>
+    </section>
+    <p class="footnote">Original synthetic visual. Urbanity workflows and data are documented at <a href="https://urbanity.readthedocs.io/en/latest/">urbanity.readthedocs.io</a>.</p>
+  </main>
+</body>
+</html>

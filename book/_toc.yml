@@ -1,0 +1,11 @@
+format: jb-book
+root: index
+chapters:
+  - file: start-here
+  - file: notebooks/street-networks
+  - file: notebooks/urban-graphs
+  - file: notebooks/urban-context
+  - file: notebooks/imagery
+  - file: notebooks/visualisation
+  - file: notebooks/graph-ml
+  - file: notebooks/reproducibility

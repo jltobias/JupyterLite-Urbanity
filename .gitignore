@@ -1,0 +1,4 @@
+_build/
+book/_build/
+.jupyterlite.doit.db
+.ipynb_checkpoints/

@@ -1,0 +1,28 @@
+title: "Urbanity: Cities as Connected Systems"
+author: "JupyterLite-Urbanity contributors"
+copyright: "2026"
+logo: _static/urbanity-mark.svg
+only_build_toc_files: true
+
+execute:
+  execute_notebooks: "off"
+
+parse:
+  myst_enable_extensions:
+    - colon_fence
+    - deflist
+    - dollarmath
+    - linkify
+    - substitution
+
+html:
+  use_issues_button: true
+  use_repository_button: true
+  use_edit_page_button: false
+  extra_footer: |
+    <p>Independent educational companion to <a href="https://github.com/winstonyym/urbanity">Urbanity</a>. Synthetic examples are illustrative, not city observations.</p>
+
+repository:
+  url: https://github.com/jltobias/JupyterLite-Urbanity
+  branch: main
+  path_to_book: book

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="An interactive, synthetic 3D urban map teaching exhibit.">
+  <title>3D map — Urbanity learning companion</title>
+  <link rel="stylesheet" href="../_static/exhibits.css">
+  <script defer src="../_static/exhibits.js"></script>
+</head>
+<body>
+  <main class="page">
+    <p class="eyebrow">JUPYTERLITE × URBANITY · VISUAL EXHIBIT</p>
+    <h1>3D map: compare built form</h1>
+    <p class="intro">This is an isometric teaching sketch. Toggle the schematic height layer to compare buildings; the heights are invented and have no geographic meaning.</p>
+    <nav class="links" aria-label="Related exhibits">
+      <a href="2d-map.html">2D map</a><a href="3d-scene.html">3D scene</a>
+      <a href="../start-here.html">Read the guide</a>
+    </nav>
+    <section class="panel">
+      <div class="controls" aria-label="Map layers">
+        <label><input type="checkbox" data-layer-toggle="heights" checked> Building heights</label>
+        <label><input type="checkbox" data-layer-toggle="network" checked> Street network</label>
+        <label><input type="checkbox" data-layer-toggle="context" checked> Context</label>
+      </div>
+      <div class="map-frame">
+        <svg viewBox="0 0 900 540" role="img" aria-labelledby="map-title map-desc">
+          <title id="map-title">Synthetic isometric neighborhood with varied building heights</title>
+          <desc id="map-desc">An invented isometric city block drawing with a street grid, extruded buildings, and a park.</desc>
+          <rect width="900" height="540" fill="#eaf3ef"/>
+          <path d="m122 170 320-90 330 103-323 102Z" fill="#d5e7df" stroke="#9abbb1" stroke-width="2"/>
+          <path d="m122 170 327 115v246L122 418Z" fill="#f3f6f1"/>
+          <path d="m449 285 323-102v235L449 531Z" fill="#e8f0ea"/>
+          <g class="layer-network" data-layer="network" fill="none" stroke="#fff" stroke-width="24">
+            <path d="m126 296 644-201M123 417l649-203M280 117v370M607 99v375"/>
+          </g>
+          <g class="layer-heights" data-layer="heights" stroke="#fff" stroke-width="2">
+            <g fill="#e5a84e"><path d="m187 175 62-18 49 17-62 19Z"/><path d="m187 175 49 18v71l-49-18Z"/><path d="m236 193 62-19v71l-62 19Z"/></g>
+            <g fill="#5a9a91"><path d="m343 133 65-19 53 19-66 20Z"/><path d="m343 133 52 20v132l-52-19Z"/><path d="m395 153 66-20v132l-66 20Z"/></g>
+            <g fill="#d28057"><path d="m515 161 73-23 56 19-74 24Z"/><path d="m515 161 55 20v92l-55-20Z"/><path d="m570 181 74-24v92l-74 24Z"/></g>
+            <g fill="#7d95ae"><path d="m644 244 60-19 45 15-61 20Z"/><path d="m644 244 44 16v79l-44-16Z"/><path d="m688 260 61-20v79l-61 20Z"/></g>
+          </g>
+          <g class="layer-context" data-layer="context">
+            <path d="m224 335 108-34 74 26-109 35Z" fill="#8fc8a0"/>
+            <path d="m224 335 73 27v69l-73-28Z" fill="#71ad84"/>
+            <path d="m297 362 109-35v69l-109 35Z" fill="#659d7b"/>
+          </g>
+          <text x="28" y="510" fill="#163248" font-family="system-ui,sans-serif" font-size="14">Illustrative only · heights are not measured</text>
+        </svg>
+      </div>
+      <p class="caption">A 3D extrusion can emphasize height differences, but perspective and occlusion can hide streets or distort comparisons. Keep a clear legend and disclose the source of every encoded value.</p>
+    </section>
+    <p class="footnote">Original synthetic visual. Urbanity's documented interactive 3D views use its native visualisation stack; this static illustration is not one of those outputs.</p>
+  </main>
+</body>
+</html>

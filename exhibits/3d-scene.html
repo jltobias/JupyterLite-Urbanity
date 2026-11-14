@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="An interactive, synthetic 3D urban graph teaching exhibit.">
+  <title>3D scene — Urbanity learning companion</title>
+  <link rel="stylesheet" href="../_static/exhibits.css">
+  <script defer src="../_static/exhibits.js"></script>
+</head>
+<body>
+  <main class="page">
+    <p class="eyebrow">JUPYTERLITE × URBANITY · VISUAL EXHIBIT</p>
+    <h1>3D scene: rotate a layered graph</h1>
+    <p class="intro">Use the sliders to rotate this invented scene and toggle the graph layers. Nodes and links are schematic, not observed features or Urbanity output.</p>
+    <nav class="links" aria-label="Related exhibits">
+      <a href="2d-map.html">2D map</a><a href="3d-map.html">3D map</a>
+      <a href="../start-here.html">Read the guide</a>
+    </nav>
+    <section class="panel">
+      <div class="controls" aria-label="Scene controls">
+        <label>Rotate horizontal <input type="range" min="-35" max="35" value="-18" data-rotate-x aria-label="Rotate scene horizontally"></label>
+        <label>Rotate vertical <input type="range" min="0" max="55" value="28" data-rotate-y aria-label="Rotate scene vertically"></label>
+        <label><input type="checkbox" data-layer-toggle="buildings3d" checked> Buildings</label>
+        <label><input type="checkbox" data-layer-toggle="links3d" checked> Relationships</label>
+      </div>
+      <div class="scene-frame">
+        <svg viewBox="0 0 760 470" role="img" aria-labelledby="scene-title scene-desc" data-scene>
+          <title id="scene-title">Synthetic 3D graph scene with four urban object types</title>
+          <desc id="scene-desc">Connected schematic plot, building, street, and intersection nodes on separate vertical levels.</desc>
+          <g class="layer-links3d" data-layer="links3d" fill="none" stroke="#74d2c7" stroke-width="4">
+            <path d="M130 300 286 160 454 280 625 140M130 300 302 365 454 280 625 335M286 160 302 365M454 280 625 140M454 280 625 335"/>
+            <path d="m286 160 168 120m-324 20 324-20m0 0 171 55" stroke-dasharray="7 8" opacity=".8"/>
+          </g>
+          <g fill="#f2ba68" stroke="#163248" stroke-width="4">
+            <circle cx="130" cy="300" r="18"/><circle cx="302" cy="365" r="18"/>
+            <circle cx="454" cy="280" r="18"/><circle cx="625" cy="335" r="18"/>
+          </g>
+          <g class="layer-buildings3d" data-layer="buildings3d">
+            <path d="M267 160v-61l38-13 40 14v60l-40 14Z" fill="#6ba99c" stroke="#163248" stroke-width="3"/>
+            <path d="M345 160v-60l38-13v60l-38 13Z" fill="#4a887f" stroke="#163248" stroke-width="3"/>
+            <path d="M286 100 324 87l40 13-39 14Z" fill="#a6d8c6" stroke="#163248" stroke-width="3"/>
+            <path d="M432 280v-76l37-14v75l-37 15Z" fill="#db9460" stroke="#163248" stroke-width="3"/>
+            <path d="M469 265v-75l41 14v76l-41-15Z" fill="#c47b50" stroke="#163248" stroke-width="3"/>
+            <path d="m432 204 37-14 41 14-41 15Z" fill="#f0bd83" stroke="#163248" stroke-width="3"/>
+          </g>
+          <g fill="#eaf5f2" font-family="system-ui,sans-serif" font-size="16" font-weight="700">
+            <text x="75" y="342">plot</text><text x="269" y="407">street</text>
+            <text x="421" y="323">building</text><text x="585" y="377">intersection</text>
+          </g>
+          <g fill="#fff" font-family="system-ui,sans-serif" font-size="13">
+            <text x="16" y="32">Each layer is a different kind of spatial object.</text>
+          </g>
+        </svg>
+      </div>
+      <p class="caption">Rotate with the controls to inspect which links join layers. In an analysis, the graph's edge definition—not the drawing—determines what each relationship means.</p>
+    </section>
+    <p class="footnote">Original synthetic visual. This is a conceptual exhibit, not a 3D engine or measured city scene.</p>
+  </main>
+</body>
+</html>
